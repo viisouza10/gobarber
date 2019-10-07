@@ -1,10 +1,2 @@
 {
-  "atlascode.jira.workingSite": {
-    "baseUrlSuffix": "atlassian.net"
-  },
-  "atlascode.jira.workingProject": {
-    "id": "10004",
-    "name": "Zemo Pay 1.0",
-    "key": "ZP10"
-  }
 }
