@@ -5,11 +5,13 @@ class NotificationController {
   async update(req, res) {
     const notification = await Notification.findByIdAndUpdate(
       req.params.id,
-      {read:true},
-      {new:true}
-    )
+      { read: true },
+      { new: true }
+    );
+
     return res.json(notification);
   }
+
   async index(req, res) {
     const isProvider = await User.findOne({
       where: {
