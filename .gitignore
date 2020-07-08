@@ -1,3 +1,10 @@
-node_modules
+.idea/
+node_modules/
+build/
+temp/
+
 *.lock
 *.log
+
+tmp/*
+!tmp/.gitkeep
