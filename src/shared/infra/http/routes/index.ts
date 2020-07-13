@@ -1,5 +1,6 @@
 import { Router } from 'express';
-import appointmentsRouter from '@modules/appointments/infra/https/routes/appointments.routes';
+
+import appointmentsRouter from '@modules/appointments/infra/http/routes/appointments.routes';
 import usersRouter from '@modules/users/infra/http/routes/user.routes';
 import sessionsRouter from '@modules/users/infra/http/routes/sessions.routes';
 
