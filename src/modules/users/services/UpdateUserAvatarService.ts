@@ -1,17 +1,17 @@
 import { getRepository } from 'typeorm';
 import path from 'path';
 import fs from 'fs';
-import User from '../models/User';
-import uploadConfig from '../config/upload';
-import AppError from '../errors/AppError';
+import uploadConfig from '@config/upload';
+import AppError from '@shared/errors/AppError';
+import User from '../infra/typeorm/entities/User';
 
 interface Request {
-  user_id:string;
-  avatar_filename:string;
+  user_id: string;
+  avatar_filename: string;
 }
 
 class UpdateUserAvatarService {
-  public async execute({ user_id, avatar_filename }:Request) :Promise<User> {
+  public async execute({ user_id, avatar_filename }: Request): Promise<User> {
     const userRepository = getRepository(User);
 
     const user = await userRepository.findOne(user_id);
