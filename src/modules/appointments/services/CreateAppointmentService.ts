@@ -1,10 +1,7 @@
-import { startOfHour } from 'date-fns';
-import { injectable, inject } from 'tsyringe';
-
 import AppError from '@shared/errors/AppError';
-
+import { startOfHour } from 'date-fns';
+import { inject, injectable } from 'tsyringe';
 import Appointment from '../infra/typeorm/entities/Appointment';
-
 import IAppointmentsRepository from '../repositories/IAppointmentsRepository';
 
 interface IRequest {
@@ -34,8 +31,6 @@ class CreateAppointmentService {
       provider_id,
       date: appointmentDate,
     });
-
-    await this.appointmentsRepository.save(appointment);
 
     return appointment;
   }
