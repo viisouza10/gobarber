@@ -4,7 +4,7 @@
   "port": 5432,
   "username": "postgres",
   "password": "docker",
-  "database": "gobarber",
+  "database": "backoffice_zemopay_com_br",
   "entities":[
     "./src/modules/**/infra/typeorm/entities/*.ts"
   ],
