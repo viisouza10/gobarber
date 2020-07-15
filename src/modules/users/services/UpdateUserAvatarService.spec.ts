@@ -66,7 +66,6 @@ describe('UpdateUserAvatar', () => {
       fakeUsersRepository,
       fakeStorageProvider,
     );
-
     expect(
       updateUserAvatar.execute({
         user_id: 'now-existing-user',
