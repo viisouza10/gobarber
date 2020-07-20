@@ -21,6 +21,7 @@ describe('SendForgotPasswordEmail', () => {
       fakeUserTokensRepository,
     );
   });
+
   it('should be able to recover the password using the email', async () => {
     const sendEmail = jest.spyOn(fakeMailProvider, 'sendEmail');
 
