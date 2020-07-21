@@ -21,7 +21,7 @@ describe('ShowProfileService', () => {
     const profile = await showProfile.execute({ user_id: user.id });
 
     expect(profile.name).toBe('John Doe');
-    expect(profile.email).toBe('johntre@example.com');
+    expect(profile.email).toBe('johndoe@example.com');
   });
 
   it('should not be able show the profile from non-existing user', async () => {
