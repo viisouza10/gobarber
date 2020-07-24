@@ -8,6 +8,6 @@ const providersController = new ProvidersController();
 
 providersRoutes.use(ensureAuthenticated);
 
-providersRoutes.post('/', providersController.index);
+providersRoutes.get('/', providersController.index);
 
 export default providersRoutes;
