@@ -1,5 +1,7 @@
 import { container } from 'tsyringe';
 
+import AppointmentsRepository from '@modules/appointments/infra/typeorm/repositories/AppointmentsRepository';
+import IAppointmentsRepository from '@modules/appointments/repositories/IAppointmentsRepository';
 import DiskStorageProvider from './StorageProvider/implementations/DiskStorageProvider';
 import IStorageProvider from './StorageProvider/models/IStorageProvider';
 
@@ -8,6 +10,11 @@ import EtherealEmailProvider from './MailProvider/implementations/EtherealEmailP
 
 import HandlebarsMailTemplateProvider from './MailTemplateProvider/implementations/HandlebarsMailTemplateProvider';
 import IMailTemplateProvider from './MailTemplateProvider/models/IMailTemplateProvider';
+
+container.registerSingleton<IAppointmentsRepository>(
+  'AppointemntsRepository',
+  AppointmentsRepository,
+);
 
 container.registerSingleton<IStorageProvider>(
   'StorageProvider',
