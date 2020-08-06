@@ -2,8 +2,10 @@
 node_modules/
 build/
 temp/
+.env
 dist/
 coverage/*
+ormconfig.json
 
 *.lock
 *.log
