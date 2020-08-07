@@ -44,7 +44,7 @@ class ListProviderAppointmentsService {
           day,
         },
       );
-      console.log('buscou no banco');
+
       await this.cacheProvider.save(cacheKey, appointments);
     }
 
